@@ -1,0 +1,132 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    min-height: 100vh;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+h1 {
+    color: rgb(76, 57, 57);
+    font-family: "Papyrus", fantasy;
+    margin: 0;
+    padding: 0; 
+    text-align: center; 
+    font-size: 50px;
+}
+
+h1:after {
+    display: inline-block;
+    content: "";
+    height: 2px;
+    background: black;
+    min-width: 90%;
+    margin-bottom: 35px;
+  }
+
+p {
+    font-size: 16px;
+}
+.upperBox {
+    width: 100%; /* Ensure element fits within viewport */
+    max-width: 100%; /* Ensure element does not exceed viewport */
+    overflow: hidden; 
+    height: 500px;
+}
+
+.button-event{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 25px;
+    font-weight: bold;
+
+    /* Center horizontally */
+    position: fixed;
+    left: 44%;
+    transform: translateX(-50%);
+    
+    /* Center vertically */
+    top: 44%;
+    transform: translateY(-50%);
+}
+
+.button-event:hover {
+    background-color: #8eb1df;
+}
+/* -----------------------------------------float----------------------------------------------------*/
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+/* -----------------------------------------Octa Shape----------------------------------------------------*/
+.octaOne {
+    width: 550px;
+    
+    aspect-ratio: 1;
+    clip-path: ellipse(92% 45% at 6% 45%);
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+    
+.octaOne::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/octaOne.jpg); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease; 
+}
+
+.octaOne:hover::after {
+    opacity: 1;
+}
+
+.octaTwo {
+    width: 550px; 
+    aspect-ratio: 1; 
+    
+    clip-path: ellipse(72% 50% at 100% 52%);
+    background: radial-gradient(circle at 7.1% 15.6%, rgb(22, 160, 133) 0%, rgb(64, 240, 206) 100.3%); 
+    position: absolute;
+    top: 20%; 
+    right: 0; 
+    transform: translate(0, -50%); 
+}
+
+.octaTwo::after {
+    content: ""; 
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/octaTwo.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    opacity: 0;
+    transition: opacity 0.8s ease; 
+}
+
+.octaTwo:hover::after {
+    opacity: 1; 
+}
