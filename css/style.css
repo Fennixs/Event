@@ -1,12 +1,17 @@
-body {
-  font-family: sans-serif;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  min-height: 100vh;
+html, body {
+  height: 100%;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  overflow: hidden;
+  overflow: hidden; /* Prevent scrolling */
 }
 
+body {
+  font-family: sans-serif;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover; /* Ensure the image covers the entire body */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
 h1 {
   color: rgb(76, 57, 57);
   font-family: "Papyrus", fantasy;
