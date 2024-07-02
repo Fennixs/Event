@@ -1,0 +1,203 @@
+/* -----------------------------------------float----------------------------------------------------*/
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  /* -----------------------------------------Birds----------------------------------------------------*/
+.bird{
+    background:url("../assets/bird.png");
+    width: 130px;
+    height: 175px;
+    position: absolute;
+}
+
+.bird1{
+    top: 25%;
+    left: -10%;
+    animation: birdFly 1s steps(10) infinite, birdMove 16s linear infinite;
+}
+
+.bird2{
+    top: 5%;
+    left: -10%;
+    animation: birdFly 1s steps(10) infinite, birdMove2 15s linear infinite;
+    animation-delay: 3s;
+}
+
+.bird3{
+    top: 15%;
+    left: -10%;
+    animation: birdFly 1s steps(10) infinite, birdMove2 14s linear infinite;
+    animation-delay: 5s;
+}
+
+/* --bird animation-- */
+@keyframes birdFly{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1305px;
+    }
+}
+
+
+/* --bird movement left to right-- */
+@keyframes birdMove{
+    0% {
+		transform: scale(0.2) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+}
+@keyframes birdMove2 {
+    0% {
+        transform: scale(0.3) translateX(-10vw);
+    }
+    
+    10% {
+        transform: translateY(-3vh) translateX(8vw) scale(0.4);
+    }
+    
+    20% {
+        transform: translateY(2vh) translateX(20vw) scale(0.45);
+    }
+    
+    30% {
+        transform: translateY(-2vh) translateX(35vw) scale(0.5);
+    }
+    
+    40% {
+        transform: translateY(3vh) translateX(50vw) scale(0.55);
+    }
+    
+    50% {
+        transform: translateY(-1vh) translateX(65vw) scale(0.6);
+    }
+    
+    60% {
+        transform: translateY(2vh) translateX(80vw) scale(0.65);
+    }
+    
+    70% {
+        transform: translateY(-2vh) translateX(95vw) scale(0.7);
+    }
+    
+    80% {
+        transform: translateY(1vh) translateX(110vw) scale(0.75);
+    }
+    
+    90% {
+        transform: translateY(-1vh) translateX(125vw) scale(0.8);
+    }
+    
+    100% {
+        transform: translateY(0vh) translateX(140vw) scale(0.85);
+    }
+}
+  /* -----------------------------------------RV----------------------------------------------------*/
+  .rvloop {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-bottom: 2.5px solid #121111;
+    top: -200px;
+}
+
+.rv{
+    background: url(../assets/rv.png) no-repeat;
+    background-size: cover; 
+    width: 500px;
+    height: 440px;
+    position: absolute;
+    z-index: 2; 
+    top: 84%; 
+    left: 33%; 
+    transform: translate(-50%, -50%) scale(0.2); 
+}
+
+.tree {
+    background: url(../assets/treeOne.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 300%;
+    position: absolute;
+    top: -70%;
+    
+}
+
+.tree1{
+    animation: tree 7s linear infinite;
+    z-index: 1;
+}
+
+.tree2{
+    animation: tree 9s linear infinite;
+    z-index: 1;
+}
+
+.tree3{
+    animation: tree 6s linear infinite;
+    z-index: 1;
+}
+
+.tree4{
+    animation: tree 10s linear infinite;
+    z-index: 1;
+}
+
+@keyframes tree {
+    0% {
+        transform: translateX(100%) scale(0.15); /* Start outside the left edge */
+    }
+    100% {
+        transform: translateX(-100%) scale(0.15); /* Move outside the right edge */
+    }
+}
+
+
+
