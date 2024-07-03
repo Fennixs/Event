@@ -138,14 +138,13 @@
 }
   /* -----------------------------------------RV----------------------------------------------------*/
   .rvloop {
-    margin: 0 auto;
-    position: relative;
+    position: absolute;
     display: block;
-    width: 100%;
-    height: 250px;
+    width: 50%;
+    height: 20%;
+    left: 25%;
     overflow: hidden;
-    border-bottom: 2.5px solid #121111;
-    top: -200px;
+    border-bottom: 2.5px solid #393232;
 }
 
 .rv{
@@ -155,56 +154,87 @@
     height: 440px;
     position: absolute;
     z-index: 2; 
-    top: 84%; 
+    top: 76%; 
     left: 33%; 
     transform: translate(-50%, -50%) scale(0.2); 
 }
 
+.rvFloat{
+    background: url(../assets/rvFloat.png) no-repeat;
+    background-size: cover; 
+    width: 500px;
+    height: 440px;
+    position: absolute;
+    z-index: 2; 
+    top: 85%; 
+    left: 22%; 
+    transform: translate(-50%, -50%) scale(0.08); 
+}
+
+.rvFloating {
+    animation-name: rvfloating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rvfloating {
+    0% {
+        transform: translate(-50%, -50%) scale(0.08) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.08) translateY(-40px);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.08) translateY(0);
+    }
+}
+
 .tree {
-    background: url(../assets/treeOne.png) no-repeat;
+    background: url(../assets/tree.png) no-repeat;
     background-size: contain;
     width: 100%;
     height: 300%;
     position: absolute;
-    top: -70%;
+    top: -68%;
     opacity: 0;
 }
 .doubletree {
-    background: url(../assets/treeTwo.png) no-repeat;
+    background: url(../assets/doubletree.png) no-repeat;
     background-size: contain;
     width: 100%;
     height: 300%;
     position: absolute;
-    top: -70%;
+    top: -68%;
     opacity: 0;
     
 }
 
 .tree1{
-    animation: tree 8s linear infinite;
+    animation: tree 7s linear infinite;
     z-index: 1;
 }
 
 .tree2{
-    animation: tree 8s linear infinite;
+    animation: tree 7s linear infinite;
     z-index: 1;
     animation-delay: 1.3s;
 }
 
 .tree3{
-    animation: tree 8s linear infinite;
+    animation: tree 7s linear infinite;
     z-index: 1;
     animation-delay: 3s;
 }
 
 .tree4{
-    animation: tree 8s linear infinite;
+    animation: tree 7s linear infinite;
     z-index: 1;
     animation-delay: 2s;
 }
 
 .tree5{
-    animation: tree 8s linear infinite;
+    animation: tree 7s linear infinite;
     z-index: 1;
     animation-delay: 4.6s;
 }
