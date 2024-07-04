@@ -12,6 +12,5 @@ CSS: Styling, including animations and responsive design.
 JavaScript: Small scripts to handle interactive elements.
 
 ## Getting Started
-Clone the repository: git clone https://github.com/yourusername/hangout-hub.git
-Navigate to the project directory: cd hangout-hub
+Clone the repository
 Open index.html in your preferred web browser to view the website.
